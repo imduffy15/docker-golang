@@ -29,3 +29,8 @@ RUN apk --no-cache add \
 VOLUME ["/root/.config"]
 
 RUN go get -u github.com/rancher/trash
+
+RUN echo '[http]\n\
+sslverify = false\n'\
+> $HOME/.gitconfig
+
